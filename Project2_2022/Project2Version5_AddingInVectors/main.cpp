@@ -10,7 +10,6 @@
 #include <cmath>
 #include <iomanip>
 #include <string>
-#include <array>
 using namespace std;  //STD Name-space where Library is compiled
 
 //User Libraries
@@ -20,7 +19,7 @@ using namespace std;  //STD Name-space where Library is compiled
 
 //Function Prototypes
 void H2P();
-
+void scoreboard();
 
 //Code Begins Execution Here with function main
 int main(int argc, char** argv) {
@@ -34,11 +33,13 @@ int main(int argc, char** argv) {
     char again; // to ask player if they want to play again
     int score;
     string name; //input your name
-   
+    //string for pokemon
+    string pokeA[] = {"Charmander", "Squirtle", "Bulbasaur" };
     //Initialize variables here
     h2= 50; //Health for each player
     h1= 50;
     score= 0;
+    
         //List of Problems which can be run by the program
         cout<<"**********************************"<<endl;
         cout<<"*Welcome to the world of Pokemon!*"<<endl;
@@ -48,8 +49,11 @@ int main(int argc, char** argv) {
         cout<<"Enter Any Key to Exit"<<endl;
         cin>>choose;
         cout<<endl;
+        
 do{ switch(choose){
+    
 case 1:
+    //starting the game 
     cout<<"Ready Player One"<<endl;
     cout<<"\n************************************"<<endl;
     cout<<"What is your name?"<<endl;
@@ -60,7 +64,8 @@ case 1:
     cout<<"Do you?"<<endl;
     cout<<"1. Go downstairs"<<endl;
     cout<<"2. Explore your room"<<endl;
-            cin>>choose; 
+            cin>>choose;
+            
     if (choose == 1){
         cout<<"You run down your wooden stairs. "<<endl;
         cout<<"Your mom is in the kitchen and she has a sandwich and a lunch bag next to it. "<<endl;
@@ -82,6 +87,7 @@ case 1:
             cout<<"Professor Lehr: Please choose from the following Pokemon."<<endl;
         }
     }
+            
     else{
         cout<<"You notice that you are still wearing your pajamas, and decide to change."<<endl;
         cout<<"Then you head downstairs."<<endl;
@@ -92,6 +98,7 @@ case 1:
         cout<<"1. Pretend like your mom doesn't exist"<<endl;
         cout<<"2. Hug your mom and thank her for making you a sandwich"<<endl;
         cin>>choose;
+        
         if(choose == 1){
             cout<<"You bolt out the door."<<endl;
             cout<<"Your mom is just slowing you down from taking over the Pokemon world"<<endl;
@@ -103,6 +110,7 @@ case 1:
                     "emon Trainer."<<endl;
             cout<<"Professor Lehr: Please choose from the following Pokemon."<<endl;
         }
+        
         else {
             cout<<"You hug your mom and take the sandwich."<<endl;
             cout<<"You head straight to the lab and walk in and see Professor Lehr "
@@ -119,28 +127,59 @@ case 1:
         cin>>poke; // choose pokemon
         cout<<endl;
         
+        if (poke== 1){
+            cout<<"You have chosen "<<pokeA[0]<<"!"<<endl;
+        }
+        else if (poke== 2){
+            cout<<"You have chosen "<<pokeA[1]<<"!"<<endl;
+        }
+        else{
+            cout<<"You have chosen "<<pokeA[2]<<"!"<<endl;
+        }
+        
         cout<<"A trainer appears."<<endl;
         cout<<"Trainer Sam has challenged you."<<endl;
         cout<<"************************************"<<endl;
         cout<<"Trainer Sam has sent out "<<rpoke2<<"!"<<endl;
         cout<<"You sent out "<<poke<<"!"<<endl;
+        
         do{ // BATTLE CODE
             cout<<"How would you like to attack?"<<endl;
             cout<<"1. Scratch"<<endl;
+            cout<<"2. Tackle"<<endl;
             cin>>choose;
-            choose2= 1;
-            score++;
+            
+            choose2= 2; //random for opponent 
+            
+            score++; // add score to each turn
+            
             if(choose== 1){
             int scratch = rand() % 40;
             cout<<"Your "<<poke<<"'s scratch did "<<scratch<<" damage!"<<endl;
             h2= h2 - scratch;
             cout<<"Trainer Sam's "<<rpoke2<<" has "<<h2<<" health!"<<endl;
+            cout<<endl;
+            }
+            if (choose == 2){
+            int tackle = rand() % 50;
+            cout<<"Your "<<poke<<"'s tackle did "<<tackle<<" damage!"<<endl;
+            h2= h2 - tackle;
+            cout<<"Trainer Sam's "<<rpoke2<<" has "<<h2<<" health!"<<endl;
+            cout<<endl;
             }
             if(choose2== 1){
              int scratch2 = rand() % 40;
             cout<<"Trainer Sam's "<<rpoke2<<"'s scratch did "<<scratch2<<" damage!"<<endl;
             h1= h1 - scratch2;
-              cout<<"Your "<<poke<<" has "<<h1<<" health!"<<endl;
+            cout<<"Your "<<poke<<" has "<<h1<<" health!"<<endl;
+            cout<<endl;
+            }
+            if (choose2== 2){
+            int tackle2 = rand() % 50;
+            cout<<"Trainer Sam's "<<rpoke2<<"'s tackle did "<<tackle2<<" damage!"<<endl;
+            h1= h1 - tackle2;
+            cout<<"Your "<<poke<<" has "<<h1<<" health!"<<endl;
+            cout<<endl;
             }
             if(0 >= h2){
                 cout<<endl;
@@ -160,17 +199,33 @@ case 1:
                 cin>>again;
                 break;
             }
-        }while(h2 >= 0 || h1 >= 0);  
+           
+        }while(h2 >= 0 || h1 >= 0); 
+        
+        //scoreboard
         cout<<"************************************"<<endl;
-     break;
+        cout<<"\tScoreboard"<<endl;
+        cout<<name<<"  =   "<<score<<endl;
+        cout<<"Jerry   =   4"<<endl;
+        cout<<"Terry   =   7"<<endl; 
+        cout<<"Toyo    =   9"<<endl;
+        cout<<"AFM     =   9"<<endl;
+        cout<<"Fred    =   10"<<endl;
+        cout<<"Nard    =   12"<<endl;
+        cout<<"Waur    =   12"<<endl;
+        cout<<"Jomo    =   13"<<endl;
+        cout<<"************************************"<<endl;
+        break;
             case 2:  H2P();break;
             
             default:cout<<"Exiting the Menu"<<endl;
         }
+
 }while(again== 'y' || again== 'Y');
 
     return 0;
 }
+
 void H2P(){
     cout<<"****************************"<<endl;
             cout<<"*Welcome to the How To play*"<<endl;

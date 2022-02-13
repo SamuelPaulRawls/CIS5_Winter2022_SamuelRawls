@@ -34,7 +34,7 @@ int main(int argc, char** argv) {
     char again; // to ask player if they want to play again
     int score;
     string name; //input your name
-   
+    string pokeA[] = {"Charmander", "Squirtle", "Bulbasaur" };
     //Initialize variables here
     h2= 50; //Health for each player
     h1= 50;
@@ -118,7 +118,15 @@ case 1:
         cout<<endl;
         cin>>poke; // choose pokemon
         cout<<endl;
-        
+        if (poke== 1){
+            cout<<"You have chosen "<<pokeA[0]<<"!"<<endl;
+        }
+        else if (poke== 2){
+            cout<<"You have chosen "<<pokeA[1]<<"!"<<endl;
+        }
+        else{
+            cout<<"You have chosen "<<pokeA[2]<<"!"<<endl;
+        }
         cout<<"A trainer appears."<<endl;
         cout<<"Trainer Sam has challenged you."<<endl;
         cout<<"************************************"<<endl;

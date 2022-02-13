@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Project2Version3_AddingPointSystem
+PROJECTNAME=Project2Version4_AddingInArrays
 
 # Active Configuration
 DEFAULTCONF=Debug

@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=GNU-Linux
 CND_ARTIFACT_DIR_Debug=dist/Debug/GNU-Linux
-CND_ARTIFACT_NAME_Debug=project2version3_addingpointsystem
-CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux/project2version3_addingpointsystem
+CND_ARTIFACT_NAME_Debug=project2version6_newattacks1
+CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux/project2version6_newattacks1
 CND_PACKAGE_DIR_Debug=dist/Debug/GNU-Linux/package
-CND_PACKAGE_NAME_Debug=project2version3addingpointsystem.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux/package/project2version3addingpointsystem.tar
+CND_PACKAGE_NAME_Debug=project2version6newattacks1.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux/package/project2version6newattacks1.tar
 # Release configuration
 CND_PLATFORM_Release=GNU-Linux
 CND_ARTIFACT_DIR_Release=dist/Release/GNU-Linux
-CND_ARTIFACT_NAME_Release=project2version3_addingpointsystem
-CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux/project2version3_addingpointsystem
+CND_ARTIFACT_NAME_Release=project2version6_newattacks1
+CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux/project2version6_newattacks1
 CND_PACKAGE_DIR_Release=dist/Release/GNU-Linux/package
-CND_PACKAGE_NAME_Release=project2version3addingpointsystem.tar
-CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux/package/project2version3addingpointsystem.tar
+CND_PACKAGE_NAME_Release=project2version6newattacks1.tar
+CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux/package/project2version6newattacks1.tar
 #
 # include compiler specific variables
 #
